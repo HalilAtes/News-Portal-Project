@@ -1,0 +1,21 @@
+﻿@model IQueryable<News> 
+
+@{ 
+    Layout = null;
+}
+@foreach (var item in Model)
+{
+<li>
+    @item.NewsId
+</li>
+<li>
+    @item.NewsTitle
+</li>
+<li>
+    @item.NewsDescription
+</li>
+<li>
+    @item.NewsPublishTime
+</li>
+
+}
