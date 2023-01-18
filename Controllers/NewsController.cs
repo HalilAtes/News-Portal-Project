@@ -34,7 +34,7 @@ namespace SportsStore.Controllers
             return View(news);
         }
 
-        [HttpGet("/News/GetNews/{id}")]
+        [HttpGet("/News/NewsDetailById/{id}")]
         public ActionResult NewsDetailById(int id)
         {
             var news = newsrepository.Haberler.FirstOrDefault(x => x.NewsId == id);

@@ -23,11 +23,13 @@
             <img src="~/assets/images/business/business_4.png" alt="Los Angeles" class="d-block" style="width:100%">
             <div class="carousel-caption">
                 <h3></h3>
-                <p>We had such a great time in LA!</p>
+                <p></p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="~/assets/images/business/business_6.png" alt="Chicago" class="d-block" style="width:100%">
+            <a href="/getnews/newsdetailbyid/@Model.">
+                <img src="~/assets/images/business/business_6.png" alt="Chicago" class="d-block" style="width:100%">
+            </a>
             <div class="carousel-caption">
                 <h3>Chicago</h3>
                 <p style="background-color:black;">Thank you, Chicago!</p>
@@ -48,6 +50,7 @@
         <span class="carousel-control-next-icon"></span>
     </button>
 </div>
+<br />
 @foreach (var item in Model)
 {
     <div style="background-color: white;" class="col-lg-9 stretch-card grid-margin">
@@ -57,9 +60,11 @@
                     <div class="col-sm-4 grid-margin">
                         <div class="position-relative">
                             <div class="rotate-img">
-                                <img src="~/assets/images/dashboard/home_4.jpg"
-                                     alt="thumb"
-                                     class="img-fluid" />
+                                <a href="/News/NewsDetailById/@item.NewsId">
+                                    <img src="~/assets/images/dashboard/home_4.jpg"
+                                         alt="thumb"
+                                         class="img-fluid" />
+                                </a>
                             </div>
                             <div class="badge-positioned">
                                 <span class="badge badge-danger font-weight-bold"></span>
@@ -67,14 +72,16 @@
                         </div>
                     </div>
                     <div class="col-sm-8  grid-margin">
-                        <h2 class="mb-2 font-weight-600">
-                            @item.NewsTitle
-                        </h2>
+                        <a class="text-black-50" href="/News/NewsDetailById/@item.NewsId">
+                            <h2 class="mb-2 font-weight-600">
+                                <font color="black"> @item.NewsTitle</font>
+                            </h2>
+                        </a>
                         <div class="fs-13 mb-2">
-                            <span class="mr-2">Photo </span>@item.NewsPublishTime
+                            <span class="mr-2"><font color="black">Category</font> </span>
                         </div>
                         <p class="mb-0">
-                            @item.NewsDescription
+                            <font color="black"> @item.NewsDescription</font>
                         </p>
                     </div>
                 </div>
