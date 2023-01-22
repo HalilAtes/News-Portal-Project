@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 }
 
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+@*<div id="demo" class="carousel slide" data-bs-ride="carousel">
 
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
@@ -51,7 +51,7 @@
         <span class="carousel-control-next-icon"></span>
     </button>
 </div>
-<br />
+<br />*@
 @foreach (var item in Model)
 {
     <div style="background-color: white;" class="col-lg-9 stretch-card grid-margin">
@@ -62,7 +62,7 @@
                         <div class="position-relative">
                             <div class="rotate-img">
                                 <a href="/News/NewsDetailById/@item.NewsId">
-                                    <img src="~/assets/images/dashboard/home_4.jpg"
+                                    <img src="~/assets/images/haberler/haber1.jpg"
                                          alt="thumb"
                                          class="img-fluid" />
                                 </a>
@@ -91,3 +91,9 @@
     </div>
 
 }
+<script>
+    const images = document.querySelectorAll("img");
+    images.forEach(function (image, index) {
+        image.src = "/assets/images/haberler/haber"+(index +1)+".jpg";
+    });
+</script>
